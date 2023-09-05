@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Grocery List</title>
-  <lik rel="stylesheet" href="assets/styles/style.css"></lik>
+  <link rel="stylesheet" href="assets/styles/style.css"></link>
 </head>
 <body>
   
+<div class="wrapper">
+  <div  class=wrapper-one>
+    <form class="expand">
+      <label for="input">Please type list here</label><br>
+    <input class="enter-list" id="type-list" type="text" name="input">
+  </form>
+    <div class="list-reveal" id="list-display"></div>
+    <button id="checker">view-list</button>
+  </div>
+</div>
 
-
-
-
-  <script src="assets/scripts/script.js"></script>
+<script src="assets/scripts/script.js"></script>
 </body>
 </html>
