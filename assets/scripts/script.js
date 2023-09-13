@@ -1,71 +1,71 @@
-let add = document.getElementById('add')
-let allitems=document.getElementById('list')
-let ul=document.querySelector('ul')
-let li=document.createElement('li')
-ul.append(li)
+let add = document.getElementById("add");
+let allitems = document.getElementById("list");
+let ul = document.querySelector("ul");
+// let button = document.createElement('button')
+let li = document.createElement("li");
+ul.append(li);
+// ul.append(button)
 
-let delett = document.getElementById('delete')
-function toDelete () {
-  // event.preventDefault()
-  allitems.value=""
-    li.innerHTML=""
-  
-}
+//
 
-delett.addEventListener('click', ()=>{
-  toDelete()
-})
-
-
-let inputt=document.querySelector('#input')
-
-inputt.addEventListener('input', function () {
-li.textContent= inputt.value
-if('input'=== inputt){
-  increment()
-}
-})
-
-
-
-function increment (e) {
-  let div= document.getElementById('carry')
-
-  e.preventDefault()
-  let h2= document.createElement('h2')
-
-h2.textContent= " " + inputt.value
-
-h2.addEventListener('click', ()=>{
-  h2.style.textDecoration= "line-through"
-})
- div.insertAdjacentElement('beforeend', h2)
-
- inputt.value=""
- h2.value=""
-}
-
-add.addEventListener('click', increment)
-
-
-
-
-
-// function eventkey () {
-//   if(key='Enter') {
-//     addItems()
-//   }
+// function btn () {
+//   li.innerHTML= " "
+//   allitems= ' '
+//   // h2= ' '
+//   console.log(li)
+//   // console.log(h2)
 // }
 
-// function addItems () {
-//   li.innerHTML= input.value
-  
-//   }
+// button.addEventListener('click', btn)
 
-//   li.addEventListener('click', function () {
-//     li.style.textDecoration='line-through'
+let inputt = document.querySelector("#input");
 
-//   allitems.innerHTML=('beforeend', li)
-// })
+inputt.addEventListener("input", function () {
+  // li.textContent= inputt.value
+  if ("input" === inputt) {
+    increment(e);
+  }
+});
 
+let delett = document.getElementById("delete");
+function toDelete(event) {
+  event.preventDefault();
+  li.innerHTML = "";
+}
 
+delett.addEventListener("click", () => {
+  toDelete(event);
+});
+
+function increment(e) {
+  e.preventDefault();
+  let div = document.getElementById("carry");
+  let h2 = document.createElement("h2");
+  let button = document.createElement("button");
+  h2.textContent = " " + inputt.value
+  button.style.backgroundColor = 'red'
+  button.style.width = '50px'
+  button.style.height = '20px'
+  button.style.padding = '5px'
+  button.style.borderRadius = '15px'
+  button.style.marginLeft = '80px'
+
+  h2.addEventListener('click', () => {
+    h2.style.textDecoration = 'line-through'
+    h2.style.padding = '40px'
+    h2.style.marginLeft = '20px'
+  })
+
+  button.addEventListener('click', () => {
+    h2.innerHTML = ''
+
+    console.log(button)
+  })
+  div.insertAdjacentElement('beforeend', h2)
+  h2.insertAdjacentElement('beforeend', button)
+
+  inputt.value = ''
+  h2.value = ''
+}
+
+add.addEventListener("click", increment);
