@@ -21,6 +21,7 @@ function increment (e) {
   button.style.width = '50px'
   button.style.height = '20px'
   button.style.padding = '5px'
+  button.style.border = 'none'
   button.style.borderRadius = '15px'
   button.style.marginLeft = '80px'
 
