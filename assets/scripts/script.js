@@ -1,29 +1,21 @@
-let add = document.getElementById('add')
-let allitems = document.getElementById('list')
-let ul = document.querySelector('ul')
-let li = document.createElement('li')
+const add = document.getElementById('add')
+const ul = document.querySelector('ul')
+const li = document.createElement('li')
 ul.append(li)
-let inputt = document.querySelector('#input')
+const inputt = document.querySelector('#input')
 
 inputt.addEventListener('input', function () {
   // li.textContent= inputt.value
-  if ('input' === inputt) {
-    increment(e)
+  if (inputt === 'input') {
+    increment()
   }
 })
 
-let delett = document.getElementById('delete')
-function toDelete(event) {
-  event.preventDefault()
-  li.innerHTML = ''
-}
-
-
-function increment(e) {
+function increment (e) {
   e.preventDefault()
-  let div = document.getElementById('carry')
-  let h2 = document.createElement('h2')
-  let button = document.createElement('button')
+  const div = document.getElementById('carry')
+  const h2 = document.createElement('h2')
+  const button = document.createElement('button')
   h2.textContent = '' + inputt.value
   button.style.backgroundColor = 'red'
   button.style.width = '50px'
@@ -50,4 +42,4 @@ function increment(e) {
   h2.value = ''
 }
 
-add.addEventListener("click", increment)
+add.addEventListener('click', increment)
