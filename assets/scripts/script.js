@@ -18,9 +18,6 @@ function toDelete(event) {
   li.innerHTML = ''
 }
 
-delett.addEventListener('click', () => {
-  toDelete(event)
-})
 
 function increment(e) {
   e.preventDefault()

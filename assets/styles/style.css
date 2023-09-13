@@ -32,8 +32,9 @@ form {
 
 #add {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 28%;
+  width: 18%;
   height: 34px;
   border: none;
   background-color: #008000;
@@ -41,23 +42,22 @@ form {
   padding: 36px;
 }
 
-#delete {
-  padding: 36px;
-  /* padding-bottom: 8px; */
-  display: flex;
-  align-items: center;
-  width: 30%;
-  height: 34px;
-  border: none;
-  background-color: red;
-  color: #e0e0e0;
-}
-
 form input {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  width: 100%;
-  height: 34px;
+  width: 70%;
+  height: 55px;
   border: none;
+  border-radius: 40px;
+}
+ 
+p {
+  display: flex;
+  flex-wrap: wrap;
+  color: #5d5a5a;
+  border-bottom: 2px solid #5d5a5a;
+  width: 100%;
 }
 
 form input:focus {
